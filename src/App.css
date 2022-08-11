@@ -1,0 +1,153 @@
+.body{
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  height: 800px;
+  max-width: 400px;
+  font-family: Helvetica;
+  margin:0 auto;
+}
+
+.chat-header{
+  display: flex;
+  gap: 1rem;
+}
+
+.chat-header > *{
+  margin: 0;
+}
+
+.chat-container{
+  display:flex;
+  flex-direction: column;
+  margin:0;
+  width:100%;
+  height:100%;
+  background: linear-gradient(10deg, rgba(2,0,36,0.3) 0%, rgba(9,9,121,0.3) 35%, rgba(0,212,255,0.3) 100%); 
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.input-footer{
+  display:flex;
+  justify-content:center;
+  padding:0.5rem;
+  background-color: rgb(242,242,247);
+}
+
+.input-footer form{
+  display:flex;
+  gap: 0.5rem;
+}
+
+form label{
+  width:340px;
+}
+.input-footer input[type="text"]{
+  border-radius: 1.5rem;
+  height:1.9rem;
+  border: solid 0.5px rgb(229,229,234);
+  width:100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+
+}
+
+.input-footer input[type="image"]{
+  height:1.5rem;
+  width:1.5rem;
+  border-radius: 1.5rem;
+  padding: 0.2rem;
+  border: none;
+  background-color: #007AFF;
+  color:white;
+  flex-grow:1;
+  
+}
+
+.pfp-name{
+  display:flex;
+  align-items:center;
+  flex-grow:4;
+}
+
+.pfp-name img{
+  width:50px;
+  height:50px;
+  border-radius: 50px;
+  padding: 0.5rem;
+}
+
+.pfp-name h3{
+  font-weight: 600;
+  margin: 0.5rem;
+}
+
+.back-button{
+  align-self:center;
+  margin:0.5rem;
+}
+
+
+
+.message{
+  display: flex;
+  width: fit-content;
+  justify-content: space-between;
+  background-color: #dcf8c6;
+  padding:0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.rem;
+  border-radius: 0.8rem;
+  margin: 0.4rem;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+}
+
+.message p{
+  margin: 0;
+}
+
+.time{
+  font-size: 0.8rem;
+  margin:0;
+  padding-left:0.5rem;
+  margin-bottom: -0.2rem;
+  color: grey;
+  align-self: flex-end;
+}
+
+.tick{
+  height: 16px;
+  width: 16px;
+  align-self: flex-end;
+  position: relative;
+  top: 0.4rem;
+  left: 0.2rem;
+}
+
+.default-name{
+  color: rgba(0,0,0,0.3);
+  animation: wiggle 2s ease-in-out infinite;
+}
+.default-name:hover{
+  color: #007AFF;
+}
+
+.real-name:hover{
+  color: #007AFF; 
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+ 70% { transform: rotate(0deg); }
+ 80% { transform: rotate(4deg); }
+ 90% { transform: rotate(-4deg); }
+100% { transform: rotate(0deg); }
+}
+
+.back-button{
+  height: 20px;
+}
